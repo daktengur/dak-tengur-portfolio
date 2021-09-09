@@ -45,10 +45,10 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Delog GatbsyJS Starter`,
-        short_name: `Delog`,
+        short_name: `Home — Dak Tengur — Product Designer`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#381696`,
+        theme_color: `#1D3557`,
         display: `standalone`,
         icon: "src/images/icon.png",
       },

@@ -9,40 +9,40 @@ body {
   margin-top: 0
 }
 body.light {
-  --primary-color: #381696;
-  --primary-text-color: #fff;
-  --featured-bg: #493b8a;
-  --featured-text: #fff;
-  --secondary-color: #10072b;
-  --background: #fff;
+  --primary-color: #1D3557;
+  --primary-text-color: #F1FAEE;
+  --featured-bg: #1D3557;
+  --featured-text: #F1FAEE;
+  --secondary-color: #457B9D;
+  --background: #F1FAEE;
   --site-header: var(--background);
-  --card-bg: #fff;
+  --card-bg: #F1FAEE;
   --card-bdr: #eee;
   --card-shadow: #d5d5d5;
   --btn-bg: var(--background);
-  --btn-bdr: #d3d6e7;
+  --btn-bdr: var(--background);
   --btn-text-color: #868892;
   --btn-hover-bg: var(--btn-bdr);
   --btn-hover-text-color: #00062b;
-  --contact-bg: #f7f8fe;
-  --contact-bdr: #d3d6e7;
+  --contact-bg: #F1FAEE;
+  --contact-bdr: #F1FAEE;
   --input-bg: var(--background);
 }
 body.dark {
-  --primary-color: #9984d5;
-  --primary-text-color: #fff;
-  --featured-bg: #66578d;
-  --featured-text: #fff;
-  --secondary-color: #66578d;
-  --background: #0A041A;
-  --text-color: rgba(255,255,255,0.88);
-  --text-secondary-color: rgba(255,255,255,0.66);
+  --primary-color: #F1FAEE;
+  --primary-text-color: #1D3557;
+  --featured-bg: #457B9D;
+  --featured-text: #F1FAEE;
+  --secondary-color: #457B9D;
+  --background: #1D3557;
+  --text-color: #F1FAEE;
+  --text-secondary-color: #ebf3e9;
   --site-header: var(--background);
-  --card-bg: #181326;
-  --card-bdr: #181326;
-  --card-shadow: #020204;
+  --card-bg: #457B9D;
+  --card-bdr: #457B9D;
+  --card-shadow: #1D3557;
   --btn-bg: var(--background);
-  --btn-bdr: #d3d6e7;
+  --btn-bdr: var(--background);
   --btn-text-color: #868892;
   --btn-hover-bg: var(--btn-bdr);
   --btn-hover-text-color: #00062b;
