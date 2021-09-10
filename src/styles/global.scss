@@ -122,6 +122,9 @@ a {
     }
   }
 }
+.site-title:nth-child(2) {
+  display: none;
+}
 .site-title a {
   color: var(--primary-color);
   text-decoration: none;
@@ -129,7 +132,6 @@ a {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  display: none;
 }
 .hero-header {
   display: flex;
