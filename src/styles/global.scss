@@ -89,6 +89,8 @@ a {
     font-weight: 400;
     color: var(--font);
     text-decoration: none;
+    text-align: center;
+    word-wrap:break-word;
     margin: 0 8px 0;
     &[aria-current] {
       color: var(--primary-color);
@@ -110,6 +112,16 @@ a {
   margin-bottom: 32px;
   align-items: center;
 }
+.site-title{
+  display: flex;
+  flex-direction: row;
+  > svg {
+    margin-right: 4px;
+    :hover{
+      cursor: pointer;
+    }
+  }
+}
 .site-title a {
   color: var(--primary-color);
   text-decoration: none;
@@ -117,6 +129,7 @@ a {
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  display: none;
 }
 .hero-header {
   display: flex;
