@@ -1,29 +1,34 @@
 import React from "react"
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import Layout from "../components/layout"
 import PostLink from "../components/post-link"
 import HeroHeader from "../components/heroHeader"
+import CompaniesWorkedWith from "../components/companies";
 
 const IndexPage = ({
   data: {
     site,
-    allMarkdownRemark: { edges },
-  },
+    allMarkdownRemark: {
+      edges
+    }
+  }
 }) => {
 
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+  const Posts = edges.filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .map(edge => <PostLink key={edge.node.id} post={edge.node}/>)
 
   return (
     <Layout>
       <Helmet>
-        <title>{site.siteMetadata.title}</title>
-        <meta name="description" content={site.siteMetadata.description} />
+        <h1>
+          <title>{site.siteMetadata.title}</title>
+        </h1>
+        <h2><meta name="description" content={site.siteMetadata.description}/></h2>
       </Helmet>
       <HeroHeader/>
-      <h2>Blog Posts &darr;</h2>
+      <CompaniesWorkedWith/>
+      <h2>Case Studies &darr;</h2>
       <div className="grids">
         {Posts}
       </div>
@@ -32,7 +37,7 @@ const IndexPage = ({
 }
 
 export default IndexPage
-export const pageQuery = graphql`
+export const pageQuery = graphql `
   query indexPageQuery {
     site {
       siteMetadata {
