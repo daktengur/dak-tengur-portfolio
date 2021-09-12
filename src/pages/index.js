@@ -29,8 +29,8 @@ const IndexPage = ({
       <HeroHeader/>
       <CompaniesWorkedWith/>
       <div className="caseStudies-header">
-        <div class="caseStudies-list">
           <h2>Case Studies</h2>
+        <div class="caseStudies-list">
           {Posts}
         </div>
       </div>

@@ -88,7 +88,7 @@ body.light {
   --input-bg: var(--background);
   //component -- card
   --card-bg: var(--background);
-  --card-bdr: var(--primary-color);
+  --card-bdr: var(--background-strong);
   --card-shadow: var(--background-strong);
   //component -- border
   --contact-bg: var(--background);
@@ -312,21 +312,27 @@ a {
 
 .caseStudies-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 32px;
   margin-top: 32px;
+  transition: all 300 ease-in-out;
 }
 
 .card {
   display: grid;
-  background-color: var(--card-bg);
+  background-color: var(--background);
   border-radius: 8px;
-  border: 1px solid var(--card-bdr);
+  //border: 1px solid var(--card-bdr);
   overflow: hidden;
-  line-height: 1.5;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--background-strong);
+  }
 
   &:hover .post-link {
-    color: var(--primary-color);
+    color: var(--accent);
   }
 
   > a img {
@@ -335,6 +341,9 @@ a {
 
   > header {
     padding: 24px;
+    &:hover {
+      color: var(--accent);
+    }
   }
 
   > h2:first-child {
@@ -353,10 +362,11 @@ a {
   }
 
   .post-link {
-    color: var(--primary-color);
     text-decoration: none;
   }
 }
+
+// CASE STUDY PAGE
 
 .post {
   padding: 0;
@@ -391,18 +401,18 @@ a {
 .post-thumbnail {
   text-align: center;
   min-height: 380px;
-  background-image: url('/src//assets/case-studies/test/shell-artwork.png');
+  // background-image: url('/src//assets/case-studies/test/shell-artwork.png');
   background-color: var(--featured-bg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 8px;
-  margin-bottom: 36px;
+  margin-bottom: 3rem;
   color: var(--featured-text);
   display: grid;
   align-content: center;
   position: relative;
-  padding: 16px;
+  padding: 24px;
   overflow: hidden;
 
   &:before {
