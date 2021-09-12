@@ -25,10 +25,10 @@ export default({children}) => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               xlinkHref="/">
-              <path d="M20 60H28L36 52H20V36H28V28H20L12 36V52L20 60Z" fill="var(--accent)"/>
+              <path d="M20 60H28L36 52H20V36H28V28H20L12 36V52L20 60Z" fill="var(--secondary-color)"/>
               <path
                 d="M44 60V36H52L44 28V4L36 12V28H28L36 36V52L44 60Z"
-                fill="var(--accent)"/>
+                fill="var(--primary-color)"/>
             </svg>
           </a>
           {/* <Link to="/">{data.site.siteMetadata.title}</Link> */}

@@ -240,7 +240,6 @@ a {
   height: 100%;
   padding: 4rem 2rem;
   border-radius: 8px;
-  margin-bottom: 1rem;
 }
 
 .companies-intro {
@@ -266,11 +265,7 @@ a {
   }
 }
 
-body.dark {
-  #companies-list > img {
-    filter: brightness(0.5) sepia(0) hue-rotate(0deg) saturate(1);
-  }
-}
+// COMPONENTS
 
 .button {
   padding: 12px 16px;
@@ -302,6 +297,64 @@ body.dark {
   &:hover {
     background-color: var(--btn-secondary-bg);
     color: var(--primary-text-color);
+  }
+}
+
+.caseStudies-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+  > h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.caseStudies-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 32px;
+  margin-top: 32px;
+}
+
+.card {
+  display: grid;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--card-bdr);
+  overflow: hidden;
+  line-height: 1.5;
+
+  &:hover .post-link {
+    color: var(--primary-color);
+  }
+
+  > a img {
+    display: block;
+  }
+
+  > header {
+    padding: 24px;
+  }
+
+  > h2:first-child {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .post-title {
+    font-family: $font-family--heading;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .post-meta {
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  .post-link {
+    color: var(--primary-color);
+    text-decoration: none;
   }
 }
 
@@ -374,52 +427,11 @@ body.dark {
   }
 }
 
-.grids {
+.caseStudies {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 32px;
   margin-top: 32px;
-}
-
-.card {
-  display: grid;
-  background-color: var(--card-bg);
-  border-radius: 8px;
-  border: 1px solid var(--card-bdr);
-  overflow: hidden;
-  line-height: 1.5;
-
-  &:hover .post-link {
-    color: var(--primary-color);
-  }
-
-  > a img {
-    display: block;
-  }
-
-  > header {
-    padding: 24px;
-  }
-
-  > h2:first-child {
-    margin: 0 0 0.5rem 0;
-  }
-
-  .post-title {
-    font-family: $font-family--heading;
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-  }
-
-  .post-meta {
-    font-weight: 100;
-    margin-bottom: 0;
-  }
-
-  .post-link {
-    color: var(--primary-color);
-    text-decoration: none;
-  }
 }
 
 .post-meta {
@@ -592,4 +604,10 @@ body.light {
   box-shadow: 0 0 0 2px;
   top: 8px;
   left: 2px;
+}
+
+body.dark {
+  #companies-list > img {
+    filter: brightness(0.5) sepia(0) hue-rotate(0deg) saturate(1);
+  }
 }

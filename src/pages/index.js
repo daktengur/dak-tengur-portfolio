@@ -28,9 +28,11 @@ const IndexPage = ({
       </Helmet>
       <HeroHeader/>
       <CompaniesWorkedWith/>
-      <h2>Case Studies &darr;</h2>
-      <div className="grids">
-        {Posts}
+      <div className="caseStudies-header">
+        <div class="caseStudies-list">
+          <h2>Case Studies</h2>
+          {Posts}
+        </div>
       </div>
     </Layout>
   )
