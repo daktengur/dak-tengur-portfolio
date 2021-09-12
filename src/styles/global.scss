@@ -10,7 +10,7 @@ $base-font-weight-xl: 600;
 $base-font-line-height: 1.5;
 $base-font-line-height-l: 1.8;
 
-p {
+p, ul, li {
   font-size: 1rem;
   font-family: $font-family--body;
   font-weight: $base-font-weight;
