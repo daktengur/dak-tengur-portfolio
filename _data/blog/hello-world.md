@@ -4,7 +4,7 @@ path: /portfolio/risk-reporting
 date: 2021-09-11T11:00:53.137Z
 title: Risk Reporting
 metaDescription: Replacing a manual P&L sign-off process with a seamless experience
-thumbnail: ''
+thumbnail: /assets/shell-artwork.png
 ---
 ## Overview
 
