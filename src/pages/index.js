@@ -1,65 +1,78 @@
 import React from "react"
 import Helmet from 'react-helmet';
-import {graphql, Link} from 'gatsby'
 import Layout from "../components/layout"
-import PostLink from "../components/post-link"
 import HeroHeader from "../components/heroHeader"
 import CompaniesWorkedWith from "../components/companies";
+import {Link} from "gatsby";
+import fwiArtwork from "../assets/case-studies/test/fwi-artwork.png";
 
-const IndexPage = ({
-  data: {
-    site,
-    allMarkdownRemark: {
-      edges
-    }
-  }
-}) => {
-
-  const Posts = edges.filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node}/>)
-
-  return (
-    <Layout>
+const IndexPage = () => {
+  return <Layout>
+    <div>
       <Helmet>
         <h1>
-          {site.siteMetadata.title}
+          Hi, I'm Dak.
         </h1>
-        <h2><meta name="description" content={site.siteMetadata.description}/></h2>
+        <h2>Description</h2>
       </Helmet>
-      <HeroHeader/>
-      <CompaniesWorkedWith/>
-      <div className="caseStudies-header">
-          <h2>Case Studies</h2>
-        <div class="caseStudies-list">
-          {Posts}
+    </div>
+    <HeroHeader/>
+    <CompaniesWorkedWith/>
+    <div className="caseStudies-header">
+      <h2>Case Studies</h2>
+      <div class="caseStudies-list">
+        <div className="caseStudy">
+          <Link to="/case-studies/fwi" className="card-thumbnail">
+            <img src={fwiArtwork}/>
+          </Link>
+          <h3 className="post-title">Risk Reporting</h3>
+          <h4 className="post-meta">Product Designer</h4>
+        </div>
+        <div className="caseStudy">
+          <Link to="/case-studies/fwi" className="card-thumbnail">
+            <img src={fwiArtwork}/>
+          </Link>
+          <h3 className="post-title">Environmental Products Trading Analytics</h3>
+          <h4 className="post-meta">Product Designer</h4>
+        </div>
+        <div className="caseStudy">
+          <Link to="/case-studies/fwi" className="card-thumbnail">
+            <img src={fwiArtwork}/>
+          </Link>
+          <h3 className="post-title">Volo 2</h3>
+          <h4 className="post-meta">Product Designer</h4>
+        </div>
+        <div className="caseStudy">
+          <Link to="/case-studies/fwi" className="card-thumbnail">
+            <img src={fwiArtwork}/>
+          </Link>
+          <h3 className="post-title">Salve - App</h3>
+          <h4 className="post-meta">UI/UX Designer</h4>
+        </div>
+        <div className="caseStudy">
+          <Link to="/case-studies/fwi" className="card-thumbnail">
+            <img src={fwiArtwork}/>
+          </Link>
+          <h3 className="post-title">Farmers Weekly</h3>
+          <h4 className="post-meta">Product Designer</h4>
+        </div>
+        <div className="caseStudy">
+          <Link to="/case-studies/fwi" className="card-thumbnail">
+            <img src={fwiArtwork}/>
+          </Link>
+          <h3 className="post-title">Salve</h3>
+          <h4 className="post-meta">UI/UX Designer</h4>
+        </div>
+        <div className="caseStudy">
+          <Link to="/case-studies/fwi" className="card-thumbnail">
+            <img src={fwiArtwork}/>
+          </Link>
+          <h3 className="post-title">Cisco eStore</h3>
+          <h4 className="post-meta">UI/UX Designer</h4>
         </div>
       </div>
-    </Layout>
-  )
+    </div>
+  </Layout>
 }
 
 export default IndexPage
-export const pageQuery = graphql `
-  query indexPageQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 250)
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            path
-            title
-            thumbnail
-          }
-        }
-      }
-    }
-  }
-`

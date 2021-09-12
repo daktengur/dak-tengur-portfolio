@@ -8,7 +8,6 @@ export default (props) => (
     <Link to="/about">About</Link>
     <Link to="/scribbles">Scribbles</Link>
     {/* <Link to="/contact">Contact</Link> */}
-    {/* <ThemeChanger/> */}
+    {<ThemeChanger/>}
   </nav>
-  
 )

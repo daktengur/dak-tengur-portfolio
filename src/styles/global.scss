@@ -8,9 +8,11 @@ $base-font-size: 16px;
 $base-font-weight: 400;
 $base-font-weight-xl: 600;
 $base-font-line-height: 1.5;
-$base-font-line-height-l: 1.8;
+$base-font-line-height-l: 2;
 
-p, ul, li {
+p,
+ul,
+li {
   font-size: 1rem;
   font-family: $font-family--body;
   font-weight: $base-font-weight;
@@ -260,6 +262,10 @@ a {
   justify-items: center;
   align-items: center;
 
+  @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
   > img {
     height: 48px;
   }
@@ -313,21 +319,33 @@ a {
 .caseStudies-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 32px;
+  grid-gap: 48px;
   margin-top: 32px;
-  transition: all 300 ease-in-out;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
-.card {
-  display: grid;
-  background-color: var(--background);
-  border-radius: 8px;
-  //border: 1px solid var(--card-bdr);
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
+.caseStudy {
+  a.card-thumbnail {
+    display: block;
+  }
 
   &:hover {
     cursor: pointer;
+    color: var(--accent);
     background-color: var(--background-strong);
   }
 
@@ -335,15 +353,8 @@ a {
     color: var(--accent);
   }
 
-  > a img {
-    display: block;
-  }
-
-  > header {
-    padding: 24px;
-    &:hover {
-      color: var(--accent);
-    }
+  > a {
+    text-decoration: none;
   }
 
   > h2:first-child {
@@ -352,13 +363,22 @@ a {
 
   .post-title {
     font-family: $font-family--heading;
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
+    //font-size: 1.2rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    padding: 24px 0 0 24px;
+      @media only screen and (max-width: 768px) {
+      padding: 16px 0 0 0;
+  }
   }
 
   .post-meta {
     font-weight: 400;
     margin-bottom: 0;
+    padding: 0 0 24px 24px;
+    @media only screen and (max-width: 768px) {
+      padding: 0 0 24px 0;
+  }
   }
 
   .post-link {
@@ -372,11 +392,15 @@ a {
   padding: 0;
   background: var(--background);
   color: var(--primary-color);
-  line-height: 1.5;
 
   > .blog-post-content {
-    max-width: 768px;
+    max-width: 612px;
     margin: 0 auto;
+
+    > p {
+      line-height: $base-font-line-height-l;
+      margin-bottom: 40px;
+    }
   }
 
   > .blog-post-content *:last-child,
@@ -542,7 +566,8 @@ body.light {
 .mode-container {
   width: 24px;
   height: 24px;
-  margin-left: 20px;
+  margin-left: 12px;
+  cursor: pointer;
 }
 
 // CSS.gg icons for sun and moon
@@ -576,8 +601,8 @@ body.light {
   height: 2px;
   border-right: 4px solid;
   border-left: 4px solid;
-  left: -6px;
-  top: 5px;
+  left: -5px;
+  top: 4px;
 }
 
 .gg-sun::before {
@@ -618,6 +643,6 @@ body.light {
 
 body.dark {
   #companies-list > img {
-    filter: brightness(0.5) sepia(0) hue-rotate(0deg) saturate(1);
+    filter: brightness(0.64) sepia(0) hue-rotate(0deg) saturate(1);
   }
 }
