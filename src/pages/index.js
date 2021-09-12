@@ -22,7 +22,7 @@ const IndexPage = ({
     <Layout>
       <Helmet>
         <h1>
-          <title>{site.siteMetadata.title}</title>
+          {site.siteMetadata.title}
         </h1>
         <h2><meta name="description" content={site.siteMetadata.description}/></h2>
       </Helmet>
