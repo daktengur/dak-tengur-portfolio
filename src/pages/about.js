@@ -1,10 +1,11 @@
 import React from "react"
 import Helmet from "react-helmet"
 import Layout from "../components/layout"
+import AboutMe from "../components/aboutMe"
 
-const AboutMe = () => {
+const About = () => {
     return <Layout>
-        <div>Hello there!</div>
+        <AboutMe />
     </Layout>
 }
-export default AboutMe
+export default About

@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap");
 
 $font-family--heading: "Inter", -apple-system, sans-serif;
-$font-family--body: "Merriweather", sans-serif;
+$font-family--body: "Montserrat", sans-serif;
 
 $base-font-size: 16px;
 $base-font-weight: 400;
@@ -104,7 +104,7 @@ body.dark {
   --secondary-color: #457b9d;
   --tertiary-color: #a8dadc;
   --background: #1d3557;
-  --background-strong: #e4ece1;
+  --background-strong: #000f23;
 
   //text
   --text: var(--primary-color);
@@ -146,6 +146,15 @@ body {
 a {
   color: var(--primary-color);
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p > span > a {
+  color: var(--primary-color);
+  text-decoration: underline;
 
   &:hover {
     text-decoration: underline;
@@ -263,7 +272,7 @@ a {
   align-items: center;
 
   @media only screen and (max-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   > img {
@@ -367,9 +376,9 @@ a {
     margin-bottom: 0;
     text-decoration: none;
     padding: 24px 0 0 24px;
-      @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
       padding: 16px 0 0 0;
-  }
+    }
   }
 
   .post-meta {
@@ -378,7 +387,7 @@ a {
     padding: 0 0 24px 24px;
     @media only screen and (max-width: 768px) {
       padding: 0 0 24px 0;
-  }
+    }
   }
 
   .post-link {
@@ -474,13 +483,26 @@ a {
 }
 
 .site-footer {
-  text-align: center;
-  margin: 48px 0 16px 0;
-  color: var(--primary-color);
-
-  a {
-    font-weight: 700;
+  display: flex;
+  background: var(--background-strong);
+  color: var(--primary-text-color);
+  padding: 48px 24px 64px 24px;
+  justify-content: center;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 48px;
   }
+
+  .footer-social.footer-social-links {
+    display: grid;
+  }
+}
+
+li.footer-social-link-item > a:hover {
+    text-decoration: none;
 }
 
 .form-container {
@@ -644,5 +666,91 @@ body.light {
 body.dark {
   #companies-list > img {
     filter: brightness(0.64) sepia(0) hue-rotate(0deg) saturate(1);
+  }
+}
+
+// ABOUT ME
+
+.aboutMe-header {
+  display: flex;
+  background-color: var(--background);
+  color: var(--text-color);
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  padding: 4rem 0rem;
+  border-radius: 8px;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.aboutMe-intro,
+.aboutMe-faq {
+  max-width: 80%;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  > h2 {
+    margin: 64px 0 48px 0;
+    font-size: 2.5rem;
+  }
+  > p {
+    margin-bottom: 48px;
+    line-height: $base-font-line-height-l;
+  }
+  > p > ul {
+    padding: 32px;
+    @media only screen and (max-width: 768px) {
+      padding: 0 0 0 24px;
+    }
+  }
+  > p > ul > li {
+    line-height: $base-font-line-height-l;
+  }
+}
+
+.aboutMe-hobbies {
+  max-width: 80%;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
+    padding: 0;
+  }
+  p {
+    margin-bottom: 48px;
+    line-height: $base-font-line-height-l;
+  }
+}
+
+.aboutMe-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 360px);
+  grid-gap: 24px;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 512px);
+  }
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.aboutMe-faq-item {
+  padding: 0 0 16px 0;
+
+  h3 {
+    font-weight: 600;
+    margin: 0 0 8px 0;
   }
 }
