@@ -17,6 +17,9 @@ li {
   font-family: $font-family--body;
   font-weight: $base-font-weight;
   line-height: $base-font-line-height;
+  @media only screen and (max-width: 768px) {
+    font-size: .8rem;
+   }
 }
 
 h4 {
@@ -24,6 +27,9 @@ h4 {
   font-family: $font-family--heading;
   font-weight: $base-font-weight-xl;
   line-height: $base-font-line-height;
+  @media only screen and (max-width: 768px) {
+    font-size: 1rem;
+   }
 }
 
 h3 {
@@ -31,6 +37,9 @@ h3 {
   font-family: $font-family--heading;
   font-weight: $base-font-weight-xl;
   line-height: $base-font-line-height;
+  @media only screen and (max-width: 768px) {
+    font-size: 1.2rem;
+   }
 }
 
 h2 {
@@ -38,6 +47,9 @@ h2 {
   font-family: $font-family--heading;
   font-weight: $base-font-weight-xl;
   line-height: $base-font-line-height;
+  @media only screen and (max-width: 768px) {
+    font-size: 1.6rem;
+   }
 }
 
 h1 {
@@ -45,6 +57,10 @@ h1 {
   font-family: $font-family--heading;
   font-weight: $base-font-weight-xl;
   line-height: $base-font-line-height;
+  @media only screen and (max-width: 768px) {
+   font-size: 2rem;
+  }
+
 }
 
 html,
@@ -62,36 +78,52 @@ body {
 body.light {
   //colors
   --accent: #e63946;
-  --primary-color: #1d3557;
-  --secondary-color: #457b9d;
-  --tertiary-color: #a8dadc;
+  --dark-blue: #000f23;
+  --light-blue: #457b9d;
+  --mid-blue: #a8dadc;
   --background: #f1faee;
-  --background-strong: #e4ece1;
+  --border: #E4ECE1;
+  --background-surface: #fff;
+
+  // shadows
+  --shadow-elevation-1: 6.3px 12.5px 10px rgba(0, 0, 0, 0.035),
+    50px 100px 80px rgba(0, 0, 0, 0.07);
+  --shadow-elevation-2: 3.3px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    11.2px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    50px 100px 80px rgba(0, 0, 0, 0.07);
+  --shadow-elevation-3: 2.3px 4.5px 3.6px rgba(0, 0, 0, 0.024),
+    6.3px 12.5px 10px rgba(0, 0, 0, 0.035),
+    15.1px 30.1px 24.1px rgba(0, 0, 0, 0.046),
+    50px 100px 80px rgba(0, 0, 0, 0.07);
 
   //text
-  --text: var(--primary-color);
-  --text-color: var(--primary-color);
+  --text: var(--dark-blue);
+  --text-color: var(--dark-blue);
   --text-color-invert: var(--background);
+
   --primary-text-color: var(--background);
-  --text-secondary-color: var(--text-secondary-color);
+  --text-light-blue: var(--text-light-blue);
   --btn-text-color: var(--background);
+
+  //logo 
+  --primary-color: var(--dark-blue);
+  --secondary-color: var(--light-blue);
 
   //component -- header/navigation
   --site-header: var(--background);
   //component -- featured bg
-  --featured-bg: var(--primary-color);
+  --featured-bg: var(--dark-blue);
   --featured-text: var(--background);
   //component -- button
   --btn-bg: var(--background);
   --btn-bdr: var(--background);
   --btn-hover-bg: var(--btn-bdr);
-  --btn-hover-text-color: #00062b;
+  --btn-hover-text-color: #var(--dark-blue);
   //component -- input
   --input-bg: var(--background);
   //component -- card
-  --card-bg: var(--background);
-  --card-bdr: var(--background-strong);
-  --card-shadow: var(--background-strong);
+  --card-bg: var(--mid-blue);
+  --card-bdr: var(--border);
   //component -- border
   --contact-bg: var(--background);
   --contact-bdr: var(--background);
@@ -100,36 +132,40 @@ body.light {
 body.dark {
   //colors
   --accent: #e63946;
-  --primary-color: #f1faee;
-  --secondary-color: #457b9d;
-  --tertiary-color: #a8dadc;
-  --background: #1d3557;
-  --background-strong: #000f23;
+  --dark-blue: #f1faee;
+  --light-blue: #457b9d;
+  --mid-blue: #a8dadc;
+  --background: #000f23;
+  --background-surface: #0A182C;
+  --border: #263344;
+
+    //logo 
+    --primary-color: var(--dark-blue);
+    --secondary-color: var(--light-blue);
 
   //text
-  --text: var(--primary-color);
-  --text-color: var(--primary-color);
+  --text: var(--dark-blue);
+  --text-color: var(--dark-blue);
   --text-color-invert: var(--background);
   --primary-text-color: var(--background);
-  --text-secondary-color: var(--text-secondary-color);
+  --text-light-blue: var(--text-light-blue);
   --btn-text-color: var(--background);
 
   //component -- header/navigation
   --site-header: var(--background);
   //component -- featured bg
-  --featured-bg: var(--primary-color);
+  --featured-bg: var(--dark-blue);
   --featured-text: var(--background);
   //component -- button
   --btn-bg: var(--background);
   --btn-bdr: var(--background);
   --btn-hover-bg: var(--btn-bdr);
-  --btn-hover-text-color: #00062b;
+  --btn-hover-text-color: var(--dark-blue);
   //component -- input
   --input-bg: var(--background);
   //component -- card
-  --card-bg: var(--background);
-  --card-bdr: var(--primary-color);
-  --card-shadow: var(--background-strong);
+  --card-bg: var(--background-light);
+  --card-bdr: var(--border);
   //component -- border
   --contact-bg: var(--background);
   --contact-bdr: var(--background);
@@ -138,13 +174,13 @@ body.dark {
 /* System Fonts as used by Medium and WordPress */
 body {
   font-family: $font-family--heading;
-  border-top: 4px solid var(--primary-color);
+  border-top: 4px solid var(--dark-blue);
   background-color: var(--background);
-  color: var(--primary-color);
+  color: var(--dark-blue);
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--dark-blue);
   text-decoration: none;
 
   &:hover {
@@ -153,7 +189,7 @@ a {
 }
 
 p > span > a {
-  color: var(--primary-color);
+  color: var(--dark-blue);
   text-decoration: underline;
 
   &:hover {
@@ -195,12 +231,12 @@ p > span > a {
     margin: 0 8px 0;
 
     &[aria-current] {
-      color: var(--primary-color);
+      color: var(--dark-blue);
       font-weight: 700;
     }
 
     &:hover {
-      color: var(--primary-color);
+      color: var(--dark-blue);
     }
 
     &:last-child {
@@ -244,22 +280,23 @@ p > span > a {
 
 .companies-header {
   display: flex;
-  background-color: var(--primary-color);
+  background-color: var(--dark-blue);
   color: var(--text-color-invert);
   flex-direction: column;
   justify-content: center;
   height: 100%;
   padding: 4rem 2rem;
   border-radius: 8px;
+  @media only screen and (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
 }
 
 .companies-intro {
-  > h2 {
-    font-size: 2.5rem;
-  }
   > p {
     max-width: 612px;
     margin-bottom: 48px;
+    line-height: $base-font-line-height-l;
   }
 }
 
@@ -280,7 +317,7 @@ p > span > a {
   }
 }
 
-// COMPONENTS
+// BUTTON
 
 .button {
   padding: 12px 16px;
@@ -296,190 +333,181 @@ p > span > a {
   margin: 0 1rem 0 0;
   transition: background-color 0.3s ease-in-out;
 
+  @media only screen and (max-width: 768px) {
+    padding: 8px 12px;
+  }
+
   &.-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
     color: var(--primary-text-color);
 
     &:hover {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
+      background-color: var(--light-blue);
+      border-color: var(--light-blue);
       color: var(--primary-text-color);
       text-decoration: none;
     }
   }
 
+  &.-transparent {
+    border-color: var(--dark-blue);
+    background: var(--background-surface);
+    color: var(--dark-blue);
+
+    &:hover {
+      background-color: var(--background-surface);
+      border-color: var(--dark-blue);
+      color: var(--dark-blue);
+      text-decoration: none;
+    }
+  }
+
   &:hover {
-    background-color: var(--btn-secondary-bg);
+    background-color: var(--dark-blue);
     color: var(--primary-text-color);
   }
 }
+
+// CASE STUDY ON HOMEPAGE
 
 .caseStudies-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 4rem 0;
-  > h2 {
-    font-size: 2.5rem;
-  }
 }
 
 .caseStudies-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 48px;
-  margin-top: 32px;
 
   @media only screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
+    grid-gap: 24px;
   }
 
-  > div {
+  > .caseStudy {
     display: flex;
-    flex-direction: column;
-    background-color: var(--background);
+    flex-direction: row-reverse;
+    background-color: var(--background-surface);
     border-radius: 8px;
-    height: 100%;
     width: 100%;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      background: var(--background-surface);
+    }
+
+    &.-flipped {
+      flex-direction: row;
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        background: var(--background-surface);
+      }
+    }
   }
 }
 
 .caseStudy {
-  a.card-thumbnail {
-    display: block;
+  a.caseStudy-thumbnail {
+    display: flex;
+    width: 66%;
+    min-height: 40vh;
+
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      min-height: auto;
+    }
   }
 
   &:hover {
     cursor: pointer;
-    color: var(--accent);
-    background-color: var(--background-strong);
-  }
-
-  &:hover .post-link {
-    color: var(--accent);
+    //background-color: var(--background-light);
+    box-shadow: var(--shadow-elevation-1);
   }
 
   > a {
     text-decoration: none;
   }
 
-  > h2:first-child {
-    margin: 0 0 0.5rem 0;
-  }
-
-  .post-title {
-    font-family: $font-family--heading;
-    //font-size: 1.2rem;
-    margin-bottom: 0;
-    text-decoration: none;
-    padding: 24px 0 0 24px;
-    @media only screen and (max-width: 768px) {
-      padding: 16px 0 0 0;
-    }
-  }
-
-  .post-meta {
+  .caseStudy-wrapper {
+    display: flex;
+    flex-direction: column;
     font-weight: 400;
     margin-bottom: 0;
-    padding: 0 0 24px 24px;
+    width: 33%;
+    justify-content: center;
+    padding: 2rem;
+
     @media only screen and (max-width: 768px) {
-      padding: 0 0 24px 0;
+      width: auto;
+      padding: 1rem;
+    }
+
+    .caseStudy-details {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-content: center;
+      justify-content: center;
+
+      > a {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .caseStudy-title {
+      font-family: $font-family--heading;
+      text-decoration: none;
+
+      @media only screen and (max-width: 768px) {
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    .caseStudy-description {
+      font-weight: 300;
+      margin: 0 0 1rem 0;
+    }
+
+    .caseStudy-history {
+      display: flex;
+      width: 100%;
+      padding: 1rem 0 0 0;
+      gap: 1rem;
+      flex-direction: row;
+      border-top: 1px solid var(--card-bdr);
+      align-items: center;
+      justify-content: center;
+
+      > span {
+        display: inherit;
+        flex: 1;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        @media only screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      .caseStudy-company{
+        max-height: 24px;
+      }
     }
   }
 
-  .post-link {
+  .caseStudy-link {
     text-decoration: none;
   }
-}
 
-// CASE STUDY PAGE
-
-.post {
-  padding: 0;
-  background: var(--background);
-  color: var(--primary-color);
-
-  > .blog-post-content {
-    max-width: 612px;
-    margin: 0 auto;
-
-    > p {
-      line-height: $base-font-line-height-l;
-      margin-bottom: 40px;
-    }
+  .caseStudy-role {
+    font-size: 12px;
   }
-
-  > .blog-post-content *:last-child,
-  > *:last-child {
-    margin-bottom: 0;
-  }
-
-  .post-title {
-    font-family: $font-family--heading;
-    text-align: center;
-    margin: 0 0 0.5rem;
-    line-height: 1.3;
-    font-size: 2rem;
-  }
-
-  .post-meta {
-    margin-bottom: 32px;
-    text-align: center;
-  }
-}
-
-.post-thumbnail {
-  text-align: center;
-  min-height: 380px;
-  // background-image: url('/src//assets/case-studies/test/shell-artwork.png');
-  background-color: var(--featured-bg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;
-  margin-bottom: 3rem;
-  color: var(--featured-text);
-  display: grid;
-  align-content: center;
-  position: relative;
-  padding: 24px;
-  overflow: hidden;
-
-  &:before {
-    content: "";
-    background-color: var(--featured-bg);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-
-  > * {
-    position: relative;
-    z-index: 2;
-  }
-
-  .post-meta {
-    color: var(--primary-color);
-    margin-bottom: 0;
-  }
-}
-
-.caseStudies {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 32px;
-  margin-top: 32px;
-}
-
-.post-meta {
-  font-size: 0.8rem;
-  color: var(--text-secondary-color);
 }
 
 .site-footer {
@@ -502,8 +530,10 @@ p > span > a {
 }
 
 li.footer-social-link-item > a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
+
+// CASE STUDY PAGE
 
 .form-container {
   background-color: var(--contact-bg);
@@ -514,7 +544,7 @@ li.footer-social-link-item > a:hover {
   label {
     display: block;
     margin-bottom: 48px;
-    color: var(--text-secondary-color);
+    color: var(--text-light-blue);
   }
 
   input[type="text"],
@@ -522,7 +552,7 @@ li.footer-social-link-item > a:hover {
   textarea {
     appearance: none;
     border: 1px solid var(--card-shadow);
-    color: var(--text-secondary-color);
+    color: var(--text-light-blue);
     border-radius: 6px;
     line-height: 32px;
     padding: 6px 12px;
@@ -543,7 +573,7 @@ li.footer-social-link-item > a:hover {
   grid-gap: 32px;
 
   &.-contact {
-    .post-thumbnail {
+    .caseStudy-thumbnail {
       min-height: 240px;
     }
   }
@@ -688,6 +718,7 @@ body.dark {
 }
 
 .aboutMe-intro,
+.intro,
 .aboutMe-faq {
   max-width: 80%;
 
