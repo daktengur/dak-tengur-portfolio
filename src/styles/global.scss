@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap");
 
 $font-family--heading: "Inter", -apple-system, sans-serif;
-$font-family--body: "Montserrat", sans-serif;
+$font-family--body: "Inter", sans-serif;
 
 $base-font-size: 16px;
 $base-font-weight: 400;
@@ -12,16 +12,22 @@ $base-font-line-height-l: 2;
 
 p,
 ul,
-li {
+li,
+span,
+quote {
   font-size: 1rem;
   font-family: $font-family--body;
   font-weight: $base-font-weight;
   line-height: $base-font-line-height;
+  //margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   @media only screen and (max-width: 768px) {
     font-size: 1rem;
-   }
+  }
 
-   &.-sm {
+  &.-sm {
     font-size: 0.875rem;
   }
 }
@@ -33,7 +39,7 @@ h4 {
   line-height: $base-font-line-height;
   @media only screen and (max-width: 768px) {
     font-size: 1.4rem;
-   }
+  }
 }
 
 h3 {
@@ -43,7 +49,7 @@ h3 {
   line-height: $base-font-line-height;
   @media only screen and (max-width: 768px) {
     font-size: 1.6rem;
-   }
+  }
 }
 
 h2 {
@@ -53,7 +59,7 @@ h2 {
   line-height: $base-font-line-height;
   @media only screen and (max-width: 768px) {
     font-size: 1.8rem;
-   }
+  }
 }
 
 h1 {
@@ -62,7 +68,7 @@ h1 {
   font-weight: $base-font-weight-xl;
   line-height: $base-font-line-height;
   @media only screen and (max-width: 768px) {
-   font-size: 2rem;
+    font-size: 2rem;
   }
 }
 
@@ -85,9 +91,9 @@ body.light {
   --light-blue: #457b9d;
   --mid-blue: #a8dadc;
   --background: #f1faee;
-  --border: #E4ECE1;
+  --border: #e4ece1;
   --background-surface: #fff;
-  --background-surface-1: #F5F5F5;
+  --background-surface-1: #f5f5f5;
 
   // shadows
   --shadow-elevation-1: 6.3px 12.5px 10px rgba(0, 0, 0, 0.035),
@@ -109,7 +115,7 @@ body.light {
   --text-light-blue: var(--text-light-blue);
   --btn-text-color: var(--background);
 
-  //logo 
+  //logo
   --primary-color: var(--dark-blue);
   --secondary-color: var(--light-blue);
 
@@ -140,13 +146,13 @@ body.dark {
   --light-blue: #457b9d;
   --mid-blue: #a8dadc;
   --background: #000f23;
-  --background-surface: #0A182C;
+  --background-surface: #0a182c;
   --background-surface-1: #070333;
   --border: #263344;
 
-    //logo 
-    --primary-color: var(--dark-blue);
-    --secondary-color: var(--light-blue);
+  //logo
+  --primary-color: var(--dark-blue);
+  --secondary-color: var(--light-blue);
 
   //text
   --text: var(--dark-blue);
@@ -346,7 +352,7 @@ p > span > a {
     padding: 8px 12px;
     font-size: 14px;
   }
-  
+
   @media only screen and (max-width: 768px) {
     padding: 8px 12px;
   }
@@ -514,7 +520,7 @@ p > span > a {
         }
       }
 
-      .caseStudy-company{
+      .caseStudy-company {
         max-height: 24px;
       }
     }
@@ -528,6 +534,8 @@ p > span > a {
     font-size: 12px;
   }
 }
+
+// FOOTER
 
 .site-footer {
   display: flex;
@@ -553,6 +561,118 @@ li.footer-social-link-item > a:hover {
 }
 
 // CASE STUDY PAGE
+
+.portfolioItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  
+  .portfolioItem__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--text-color-invert);
+    text-align: center;
+    margin: auto;
+    padding: 4rem 0;
+    border-radius: 8px;
+
+    &.--cisco{
+      background: #00BCEE;
+      background-image: url("/src/assets/case-studies/cisco/artwork-estore.png") no-repeat center center;
+      background-size: cover;
+    }
+    
+    h1 {
+      margin: 0;
+      padding: 0 1rem;
+    }
+
+    p {
+      padding: 0 1rem;
+    }
+  }
+
+  .portfolioItem__description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+
+    &.--item{
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        display: flex;
+        min-height: 2rem;
+        margin: 0;
+        border-bottom: 1px solid var(--border);
+        font-size: .875rem;
+      }
+
+      span {
+        text-align: left;
+      }
+    }
+  }
+
+  .portfolioItem__context {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    background: darkkhaki;
+
+    &.--item{
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        display: flex;
+        min-height: 2rem;
+        margin: 0;
+        border-bottom: 1px solid red;
+        font-size: .875rem;
+      }
+
+      span {
+        text-align: left;
+      }
+    }
+  }
+
+  .portfolioItem__content {
+    background: yellow;
+
+    &.--bullet {
+      background: green;
+    }
+
+    &.--italics {
+      font-style: italic;
+    }
+
+    &.--quote {
+      display: flex;
+      width: fit-content;
+      padding: 0 2rem 0 2rem;
+      background: #ff000045;
+      border-left: 2px solid #ff0000;
+      display: flex;
+      width: fit-content;
+      padding: 0 2rem 0 2rem;
+      background: #ff000045;
+      border-left: 2px solid #ff0000;
+      margin: 0;
+      margin: auto;
+    }
+  }
+}
+
+// CONTACT US PAGE
 
 .form-container {
   background-color: var(--contact-bg);

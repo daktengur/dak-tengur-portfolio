@@ -32,7 +32,7 @@ const IndexPage = () => {
     <CompaniesWorkedWith/>
     <div className="caseStudies-header">
       <h2>Case Studies</h2>
-      <div class="caseStudies-list">
+      <div className="caseStudies-list">
         {/* Shell Risk */}
         <div className="caseStudy">
           <Link to="/case-studies/shell-risk-reporting" className="caseStudy-thumbnail">
