@@ -9,11 +9,11 @@ import dtSkyGazer from "../assets/about-me/dt-sky-gazer.jpg";
 const AboutMe = props => (
     <div className="aboutMe-header">
         <div className="intro">
-            <h2>Mauritian born, London based</h2>
+            <h2>From Mauritius, to London </h2>
             <p>
                 Born in Mauritius and moving to England at a young age, I was deeply fascinated
                 by technology and the value it can unlock. From experiencing Sony walkmans, to
-                CD players, to MP3 players, to smartphones now ... the rapid pace of change
+                CD players, to MP3 players, to smartphones ... the rapid pace of change
                 within technology was striking. An eternally progressive sector, influencing the
                 pace of many industries alike.
             </p>
@@ -28,11 +28,10 @@ const AboutMe = props => (
             <p>
                 Along the way, I've learned a few lessons:
                 <ul>
-                    <li>Design process and decisions aren’t the same for eveyr project.
-                        Understanding, interpreting and contextualising of approach and process is key
+                    <li>Design process and decisions aren’t the same for every project.
+                        Understanding, interpreting and contextualising of approach and process are keys
                         to success.</li>
-                    <li>Technical feasibility of a design and the limitations or constraints in
-                        which to work in, are important factors to keep lead times in development down.
+                    <li>Technical feasibility of a design (knowing the constraints and limitations) coupled with early user feedback, are imperative factors to keep lead times in development down.
                         No-one wants costly reworks.</li>
                 </ul>
             </p>

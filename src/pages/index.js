@@ -43,7 +43,7 @@ const IndexPage = () => {
               <h3 className="caseStudy-title">Risk Reporting</h3>
               <p className="caseStudy-description">Automating manual sign-off processes and
                 surfacing Profit and Loss information to traders and Market Risk users</p>
-                <a href='/case-studies/shell-risk-reporting' className="button -transparent">View Case &rarr;</a>
+                <a href='/case-studies/shell-risk-reporting' className="button -transparent -sm">View Case &rarr;</a>
             </div>
             <div className="caseStudy-history">
               <img
@@ -65,7 +65,7 @@ const IndexPage = () => {
             <div className="caseStudy-details">
               <h3 className="caseStudy-title">Ingestion Portal</h3>
               <p className="caseStudy-description">Creating a data catalog and democratising data access</p>
-              <a href='/case-studies/shell-stratos' className="button -transparent">View Case &rarr;</a>
+              <a href='/case-studies/shell-stratos' className="button -transparent -sm">View Case &rarr;</a>
             </div>
             <div className="caseStudy-history">
               <img
@@ -87,7 +87,7 @@ const IndexPage = () => {
             <div className="caseStudy-details">
               <h3 className="caseStudy-title">Salve App</h3>
               <p className="caseStudy-description">Improving patient wellbeing and clinic transparency of patient medication adherence</p>
-              <a href='/case-studies/salve-app' className="button -transparent">View Case &rarr;</a>
+              <a href='/case-studies/salve-app' className="button -transparent -sm">View Case &rarr;</a>
             </div>
             <div className="caseStudy-history">
               <img
@@ -109,7 +109,7 @@ const IndexPage = () => {
             <div className="caseStudy-details">
               <h3 className="caseStudy-title">Farmers Weekly</h3>
               <p className="caseStudy-description">Helping UK's leading farming publication improve content discovery</p>
-              <a href='/case-studies/fwi' className="button -transparent">View Case &rarr;</a>
+              <a href='/case-studies/fwi' className="button -transparent -sm">View Case &rarr;</a>
             </div>
             <div className="caseStudy-history">
               <img
@@ -131,7 +131,7 @@ const IndexPage = () => {
             <div className="caseStudy-details">
               <h3 className="caseStudy-title">Volo 2</h3>
               <p className="caseStudy-description">Driving efficiencies in product listing to e-commerce marketplaces</p>
-              <a href='/case-studies/volo' className="button -transparent">View Case &rarr;</a>
+              <a href='/case-studies/volo' className="button -transparent -sm">View Case &rarr;</a>
             </div>
             <div className="caseStudy-history">
               <img
@@ -153,7 +153,7 @@ const IndexPage = () => {
             <div className="caseStudy-details">
               <h3 className="caseStudy-title">Cisco eStore</h3>
               <p className="caseStudy-description">Improving the desktop and mobile experience for self-service ordering of IT services</p>
-              <a href='/case-studies/cisco-estore' className="button -transparent">View Case &rarr;</a>
+              <a href='/case-studies/cisco-estore' className="button -transparent -sm">View Case &rarr;</a>
             </div>
             <div className="caseStudy-history">
               <img
