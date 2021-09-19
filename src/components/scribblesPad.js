@@ -10,7 +10,7 @@ const ScribblesPad = props => (
                 pieces of work used in my design process. Often though, there's some great work
                 behind the scenes often captured at the beginning of the messy "figuring things
                 out" lines of a design process, or unused concepts which progressed the final
-                design. Here's a cheers to those equally crucial bis.
+                design. Here's a cheers to those equally crucial bits.
             </p>
 
         </div>
