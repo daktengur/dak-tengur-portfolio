@@ -1,7 +1,9 @@
 import React from "react"
 import Layout from "../../components/layout"
+import {graphql} from 'gatsby';
+import Img from 'gatsby-image';
 
-const CaseStudyCiscoStore = () => {
+const CaseStudyCiscoStore = (props) => {
     return <Layout>
         <div className="portfolioItem">
             <div className="portfolioItem__title --cisco">
@@ -64,9 +66,32 @@ const CaseStudyCiscoStore = () => {
                 <quote className="portfolioItem-content __quote">
                     I'm a quote bro</quote>
                 <p>xxx Cisco eStore - content xxx</p>
+                <Img fluid={props.data.artworkeStore.childImageSharp.fluid} />
                 <p>xxx Cisco eStore - content xxx</p>
             </div>
         </div>
     </Layout>
 }
 export default CaseStudyCiscoStore
+
+export const fluidImage = graphql`
+fragment fluidImage on File {
+  childImageSharp {
+    fluid(maxWidth: 1000) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+`;
+
+export const pageQuery = graphql `
+query {
+  artworkeStore: file(relativePath: { eq: "artwork-estore.png" }) {
+    childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+  }
+}
+`;
