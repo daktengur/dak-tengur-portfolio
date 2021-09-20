@@ -11,12 +11,12 @@ import VoloLogo from "../assets/logo/logo-volo-colored.svg";
 import SalveLogo from "../assets/logo/logo-salve-colored.svg";
 import CiscoLogo from "../assets/logo/logo-cisco-colored.svg";
 // Artwork
-import shellRiskArtwork from "../assets/case-studies/shell-risk/artwork-risk.png";
-import shellStratosArtwork from "../assets/case-studies/shell-stratos/artwork-stratos.png";
-import salveArtwork from "../assets/case-studies/salve/artwork-salve.png";
-import fwiArtwork from "../assets/case-studies/fwi/artwork-fwi.png";
-import voloArtwork from "../assets/case-studies/volo/artwork-volo.png";
-import ciscoEstoreArtwork from "../assets/case-studies/cisco/artwork-estore.png";
+import shellRiskArtwork from "../assets/caseStudies/shell-risk/artwork-risk.png";
+import shellStratosArtwork from "../assets/caseStudies/shell-stratos/artwork-stratos.png";
+import salveArtwork from "../assets/caseStudies/salve/artwork-salve.png";
+import fwiArtwork from "../assets/caseStudies/fwi/artwork-fwi.png";
+import voloArtwork from "../assets/caseStudies/volo/artwork-volo.png";
+import ciscoEstoreArtwork from "../assets/caseStudies/cisco/artwork-estore.png";
 
 const IndexPage = () => {
   return <Layout>

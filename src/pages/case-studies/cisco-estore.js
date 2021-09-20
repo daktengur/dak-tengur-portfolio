@@ -68,6 +68,11 @@ const CaseStudyCiscoStore = (props) => {
                 <p>xxx Cisco eStore - content xxx</p>
                 <Img fluid={props.data.artworkeStore.childImageSharp.fluid} />
                 <p>xxx Cisco eStore - content xxx</p>
+                <p>xxx Cisco eStore - content xxx</p>
+                <p>xxx Cisco eStore - content xxx</p>
+                <p>xxx Cisco eStore - content xxx</p>
+                <Img fluid={props.data.imageTwo.childImageSharp.fluid} />
+                <p>xxx Cisco eStore - content xxx</p>
             </div>
         </div>
     </Layout>
@@ -92,6 +97,13 @@ query {
           ...GatsbyImageSharpFluid
         }
       }
+  }
+  imageTwo: file(relativePath: { eq: "caseStudies/volo/artwork-volo.png" }) {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
   }
 }
 `;
